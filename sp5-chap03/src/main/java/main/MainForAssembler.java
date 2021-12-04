@@ -4,7 +4,7 @@ import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 
-import spring.Assembler;
+import assembler.Assembler;
 import spring.ChangePasswordService;
 import spring.DuplicateMemberException;
 import spring.MemberNotFoundException;
