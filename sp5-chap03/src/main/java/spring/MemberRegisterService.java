@@ -15,7 +15,10 @@ public class MemberRegisterService {
 		if(member!=null) {
 			throw new DuplicateMemberException("dup email " + req.getEmail());
 		}
-		Member newMember = new Member(req.getEmail(), req.getPassword(), req.getName(), LocalDateTime.now());
+		Member newMember = new Member(
+				req.getEmail(), req.getPassword(), 
+				req.getName(), LocalDateTime.now());
+		memberDao.insert(newMember);
 		return newMember.getId();
 	}
 }
